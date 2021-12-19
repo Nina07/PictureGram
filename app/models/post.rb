@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
-  validates :avatar, presence: true
+  validates :image, presence: true
 
-  has_one_attached :avatar, styles: { medium: "640x" }
-  validates_attachment_content_type :avatar, content_type: { /\Aimage\/.*\Z/ }
+  has_one_attached :image
+  # validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/ 
 end
